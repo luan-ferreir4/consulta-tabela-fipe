@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Hind Siliguri", sans-serif;
+
+  --white-primary: #f5f5f5;
+  --black-primary: #141414;
+  --gray--primarry: #474747;
+}
+body {
+  background-color: var(--white-primary);
+}
+
+.hidden {
+  display: none;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: 6vh;
+  margin-bottom: 20px;
+  padding: 5px 10px 3px 10px;
+
+  background-color: var(--white-primary);
+  border-bottom: 1px solid var(--gray--primarry);
+}
+
+.header__title {
+  width: 100px;
+  font-size: 26px;
+  /* margin-left: 10px; */
+}
+
+
+.header__mobileMenu {
+  width: 30px;
+  border: none;
+  font-size: 22px;
+}
+
+.standartButtons {
+  padding: 2px 8px;
+  background-color: var(--black-primary);
+  color: var(--white-primary);
+  border: none;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.topMenu {
+  position: relative;
+  height: 16vh;
+
+  margin-top: 6vh;
+  padding-top: 20px;
+}
+.topMenu__nav {
+  text-align: center;
+  width: 100%;
+}
+/* .headerTitle {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+
+  width: 220px;
+  font-size: 24px;
+  letter-spacing: 2px;
+
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  width: 90vw;
+  padding: 0 5px;
+
+  background-color: aqua;
+}
+
+.searchContainer__topContent {
+  text-align: justify;
+  margin: 15px 0;
+}
+.searchContainer__topContent > h1 {
+  margin-bottom: 5px;
+}
+.searchContainer__topContent > p {
+  width: 90%;
+  margin-block-end: 0;
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.searchContainer__form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.searchContainer__bodyInput {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin-bottom: 8px;
+}
+
+.searchContainer__bodyInput > select {
+  height: 30px;
+  padding: 0 5px;
+
+  border-radius: 8px;
+  font-weight: 300;
+}
+
+.imageContainer{
+  position: relative;
+  height: 218px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.imageContainer__img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./menuStyle.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Consulta Tabela Fipe</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header__title">AGO</h1>
+
+      <button id="headerMobileMenu" class="header__mobileMenu"><i class="fa-solid fa-bars"></i></button>
+
+      <section class="header__content hidden">
+        <nav class="header__menu">
+          <a class="header__menuItem" href="#">Fale Conosco</a>
+          <button class="header__menuItem mainButton" >TELEFONES</button>
+          <button class="header__menuItem mainButton">WHATSAPP</button>
+
+          <button class="header__menuItem mainButton">BLOG</button>
+          <button class="header__menuItem mainButton">AVALIE SEU CARRO</button>
+        </nav>
+
+        <img class="header__icon" src="#" alt="Icon" />
+
+      </section>
+    </header>
+
+    <aside id="sidemenu">
+      <ul id="sidemenu__container">
+        <li>
+          <a class="header__menuItem--faleConosco" href="#">Fale Conosco</a>
+        </li>
+        <li>
+          <a class="header__menuItem mainButton" >TELEFONES</a >
+        </li>
+        <li>
+          <a class="header__menuItem mainButton">WHATSAPP</a >
+        </li>
+        <li>
+          <a class="header__menuItem mainButton">BLOG</a >
+        </li>
+        <li>
+          <a class="header__menuItem mainButton">AVALIE SEU CARRO</a >
+        </li>
+      </ul>
+    </nav>
+  </aside>
+    
+    <section class="topMenu">
+      <nav class="topMenu__nav">
+        <button class="topMenu__button">Home</button>
+        <button class="topMenu__button">Novos</button>
+        <button class="topMenu__button">Seminovos</button>
+
+        <button class="topMenu__button">Ofertas</button>
+        <button class="topMenu__button">Serviços</button>
+        <button class="topMenu__button">Lançamentos</button>
+
+        <button class="topMenu__button">Peças</button>
+        <button class="topMenu__button">Sobre a AGO</button>
+        <button class="topMenu__button">Fale Conosco</button>
+      </nav>
+    </section>
+
+
+    <main>
+      <section id="search" class="searchContainer">
+        <div class="searchContainer__topContent">
+          <h1>TABELA FIPE</h1>
+
+          <p>Preço Médio de Veículos</p>
+
+          <p>1. A Tabela Fipe expressa preços médios de veículos anunciados pelos vendedores, no mercado nacional, servindo apenas como um parâmetro para negociações ou avaliações. Os preços efetivamente praticados variam em função da região, conservação, cor, acessórios ou qualquer outro fator que possa influenciar as condições de oferta e procura por um veículo específico.</p>
+
+          <p>2. O ano do veículo refere-se ao ano do modelo e não são considerados veículos para uso profissional ou especial.
+          </p>
+
+          <p>3. Os valores são expressos em R$ (reais) do mês/ano de referência</p>
+        </div>
+
+        <div class="searchContainer__form">
+          <h1 class="searchContainer__formTitle">Consulte</h1>
+
+          <div class="searchContainer__formBody">
+            <label for="tipo-veiculo" class="searchContainer__bodyInput">
+              Tipo de veículo
+              <select name="vehicleType" id="vehicleType">
+                <option selected disabled hidden>Selecione</option>
+              </select>
+            </label>
+  
+            <label for="marca" class="searchContainer__bodyInput">
+              Marca
+              <select name="marca" id="brand">
+                <option selected disabled hidden>Selecione</option>
+              </select>
+            </label>
+  
+            <label for="modelo" class="searchContainer__bodyInput">
+              Modelo
+              <select name="modelo" id="model">
+                <option selected disabled hidden>Selecione</option>
+              </select>
+            </label>
+  
+            <label for="ano-combustivel" class="searchContainer__bodyInput">
+              Ano e tipo de combustível
+              <select name="ano-combustivel" id="yearFuel">
+                <option selected disabled hidden>Selecione</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+
+        <div class="searchContainer__bottom">
+          <button id="searchButton" disabled>CONSULTAR</button>
+        </div>
+      </section>
+
+      <div id="imageContainer" class="imageContainer">
+        <img class="imageContainer__img" src="images/fipe-logo.jpg" alt="FIPE">
+      </div>
+
+      <section id="response" class="responseContainer hidden">
+        <p id="responseBrand" class="topText"></p>
+        <p id="responseModel" class="valueText"></p>
+        <p class="topText fixed">Mês de referência:</p>
+        <p id="responseMonth" class="valueText"></p>
+        <p class="topText fixed">Média de preço:</p>
+        <p id="responsePrice" class="valueText"></p>
+      </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
