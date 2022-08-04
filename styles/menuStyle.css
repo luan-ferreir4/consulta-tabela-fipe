@@ -39,13 +39,13 @@
   border-bottom: 2px solid var(--details);
 }
 
-.header__menuItem {
+.sidemenu__item {
   padding: 0;
   color: var(--black-primary);
   text-decoration: none;
   font-size: 14px;
 }
-.header__menuItem--faleConosco {
+.sidemenu__item--faleConosco {
   text-decoration: none;
   color: var(--details);
 }
