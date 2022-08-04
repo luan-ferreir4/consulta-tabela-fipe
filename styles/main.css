@@ -9,6 +9,9 @@
   --black-primary: #141414;
   --gray--primarry: #474747;
   --details: #36688e;
+
+  --font-body: "Hind Siliguri", sans-serif;
+  --font-title: 
 }
 body {
   background-color: var(--white-primary);
@@ -17,6 +20,7 @@ body {
 .hidden {
   display: none;
 }
+
 header {
   position: fixed;
   z-index: 2;
@@ -62,7 +66,6 @@ header {
   text-align: center;
   width: 100%;
 }
-
 .topMenu__button {
   font-size: 12px;
   padding: 0 4px;
@@ -115,20 +118,23 @@ main {
 .searchContainer__formBody {
   padding: 5px 5px 5px 10px;
 }
-
 .searchContainer__bodyInput {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-bottom: 8px;
 }
-
 .searchContainer__bodyInput > select {
   height: 30px;
   width: 90%;
   padding: 0 5px;
   border-radius: 4px;
   font-weight: 300;
+}
+.searchContainer__bottom {
+  width: 96%;
+  margin: 20px 0 25px 0;
+  text-align: end;
 }
 
 .imageContainer {
@@ -145,10 +151,21 @@ main {
   width: 90%;
 }
 
-.searchContainer__bottom {
-  width: 96%;
-  margin: 20px 0 25px 0;
-  text-align: end;
+.responseContainer {
+  width: 75%;
+  margin: 15px auto;
+  border-radius: 3px;
+  border: 1px solid var(--black-primary);
+}
+.responseContainer__title {
+  padding-left: 10px;
+  background-color: var(--black-primary);
+  color: var(--white-primary);
+}
+.responseContainer__topText {
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  color: var(--details);
 }
 
 .standartButton {
@@ -160,12 +177,14 @@ main {
   margin-right: 5px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .header__mobileMenu {
     display: none;
   }
   .header__content {
-    display: block;
+    display: flex;
   }
-
+  .header__icon {
+    width: 46px;
+  }
 }
