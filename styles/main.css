@@ -6,13 +6,22 @@
   font-family: "Hind Siliguri", sans-serif;
 
   --white-primary: #f5f5f5;
+
   --black-primary: #141414;
-  --gray--primarry: #474747;
+  --grey-primary: #727272;
+  --grey-secundary: #c8c8c8;
+
   --details: #36688e;
+  --green-primary: #50c85b;
 
   --font-body: "Hind Siliguri", sans-serif;
   --font-title: 
 }
+
+button, a, select {
+  cursor: pointer;
+}
+
 body {
   background-color: var(--white-primary);
 }
@@ -31,12 +40,12 @@ header {
   align-items: center;
 
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   margin-bottom: 20px;
   padding: 5px 10px 3px 10px;
 
   background-color: var(--white-primary);
-  border-bottom: 1px solid var(--gray--primarry);
+  border-bottom: 1px solid #c8c8c8;
 }
 
 .header__title {
@@ -57,9 +66,8 @@ header {
 }
 
 .topMenu {
-  position: relative;
   margin-bottom: 15px;
-  margin-top: 8vh;
+  margin-top: 10vh;
   padding-top: 15px;
 }
 .topMenu__nav {
@@ -132,7 +140,7 @@ main {
   font-weight: 300;
 }
 .searchContainer__bottom {
-  width: 96%;
+  width: 95%;
   margin: 20px 0 25px 0;
   text-align: end;
 }
@@ -169,22 +177,69 @@ main {
 }
 
 .standartButton {
-  padding: 2px 8px;
+  margin-left: 10px;
+  padding: 5px 14px;
+
   background-color: var(--black-primary);
   color: var(--white-primary);
   border: none;
-  border-radius: 10px;
-  margin-right: 5px;
+  border-radius: 15px;
 }
 
 @media screen and (min-width: 1024px) {
+  header{
+    position: static;
+    height: 15vh;
+    padding: 0 4vw;
+  }
   .header__mobileMenu {
     display: none;
   }
+  .header__title {
+    width: 30%;
+    font-size: 36px;
+    margin-left: 10px;
+  }
   .header__content {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+  .faleConosco{
+    color: var(--grey-primary);
+    text-decoration: none;
+  }
+  .wpp {
+    background-color: var(--green-primary);
   }
   .header__icon {
-    width: 46px;
+    margin: 0 8px;
+    width: 48px;
+  }
+
+  /* .topMenu {
+    margin-bottom: 15px;
+    margin-top: 10vh;
+    padding-top: 15px;
+  }
+  .topMenu__nav {
+    text-align: center;
+    width: 100%;
+  }
+  .topMenu__button {
+    font-size: 12px;
+    padding: 0 4px;
+    margin-left: 2px;
+    border: 1px solid var(--black-primary);
+  }
+  .topMenu__button--home {
+    font-size: 12px;
+    padding: 0 4px;
+    margin-left: 2px;
+  } */
+
+  main {
+    width: 98vw;
   }
 }
