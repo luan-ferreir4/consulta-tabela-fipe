@@ -40,21 +40,13 @@ header {
   font-size: 26px;
   margin-left: 10px;
 }
-
-
 .header__mobileMenu {
   width: 30px;
   border: none;
   font-size: 22px;
 }
-
-.standartButtons {
-  padding: 2px 8px;
-  background-color: var(--black-primary);
-  color: var(--white-primary);
-  border: none;
-  border-radius: 10px;
-  margin-right: 5px;
+.header__content {
+  display: none;
 }
 
 .topMenu {
@@ -68,19 +60,6 @@ header {
   text-align: center;
   width: 100%;
 }
-/* .headerTitle {
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
-
-  width: 220px;
-  font-size: 24px;
-  letter-spacing: 2px;
-
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-} */
 
 main {
   display: flex;
@@ -141,4 +120,19 @@ main {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
+}
+
+@media screen and (min-width: 800px) {
+  .header__content {
+    display: block;
+  }
+
+  .standartButton {
+    padding: 2px 8px;
+    background-color: var(--black-primary);
+    color: var(--white-primary);
+    border: none;
+    border-radius: 10px;
+    margin-right: 5px;
+  }
 }
