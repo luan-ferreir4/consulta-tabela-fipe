@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./menuStyle.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/mobileMenu.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,12 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;600&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Consulta Tabela Fipe</title>
@@ -31,14 +32,14 @@
 
       <button id="headerMobileMenu" class="header__mobileMenu"><i class="fa-solid fa-bars"></i></button>
 
-      <section class="header__content hidden">
+      <section class="header__content">
         <nav class="header__menu">
           <a class="header__menuItem" href="#">Fale Conosco</a>
-          <button class="header__menuItem mainButton" >TELEFONES</button>
-          <button class="header__menuItem mainButton">WHATSAPP</button>
+          <button class="header__menuItem standartButton" >TELEFONES</button>
+          <button class="header__menuItem standartButton">WHATSAPP</button>
 
-          <button class="header__menuItem mainButton">BLOG</button>
-          <button class="header__menuItem mainButton">AVALIE SEU CARRO</button>
+          <button class="header__menuItem standartButton">BLOG</button>
+          <button class="header__menuItem standartButton">AVALIE SEU CARRO</button>
         </nav>
 
         <img class="header__icon" src="#" alt="Icon" />
@@ -49,27 +50,29 @@
     <aside id="sidemenu">
       <ul id="sidemenu__container">
         <li>
-          <a class="header__menuItem--faleConosco" href="#">Fale Conosco</a>
+          <a class="sidemenu__item--faleConosco" href="#">Fale Conosco</a>
         </li>
         <li>
-          <a class="header__menuItem mainButton" >TELEFONES</a >
+          <a class="sidemenu__item">TELEFONES</a >
         </li>
         <li>
-          <a class="header__menuItem mainButton">WHATSAPP</a >
+          <a class="sidemenu__item">WHATSAPP</a >
         </li>
         <li>
-          <a class="header__menuItem mainButton">BLOG</a >
+          <a class="sidemenu__item">BLOG</a >
         </li>
         <li>
-          <a class="header__menuItem mainButton">AVALIE SEU CARRO</a >
+          <a class="sidemenu__item">AVALIE SEU CARRO</a >
         </li>
       </ul>
     </nav>
-  </aside>
+    </aside>
     
     <section class="topMenu">
       <nav class="topMenu__nav">
-        <button class="topMenu__button">Home</button>
+        <a class="topMenu__button--home">
+          <i class="fa-solid fa-house-chimney"></i>
+        </a>
         <button class="topMenu__button">Novos</button>
         <button class="topMenu__button">Seminovos</button>
 
@@ -135,7 +138,7 @@
 
 
         <div class="searchContainer__bottom">
-          <button id="searchButton" disabled>CONSULTAR</button>
+          <button id="searchButton" class="standartButton" disabled>CONSULTAR</button>
         </div>
       </section>
 
