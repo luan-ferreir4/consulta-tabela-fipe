@@ -210,13 +210,13 @@ main {
     display: none;
   }
   .header__title {
-    width: 30%;
+    width: 20%;
     font-size: 36px;
     margin-left: 10px;
   }
   .header__content {
     display: flex;
-    justify-content: left;
+    justify-content: right;
     flex-grow: 1;
     align-items: center;
   }
