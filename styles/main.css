@@ -216,9 +216,9 @@ main {
   }
   .header__content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    flex-grow: 1;
     align-items: center;
-    width: 70%;
   }
   .faleConosco {
     color: var(--grey-primary);
