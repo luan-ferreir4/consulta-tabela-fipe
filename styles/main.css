@@ -201,6 +201,8 @@ main {
 @media screen and (min-width: 1024px) {
   header {
     position: static;
+    justify-content: center;
+    
     height: 15vh;
     padding: 0 4vw;
   }
