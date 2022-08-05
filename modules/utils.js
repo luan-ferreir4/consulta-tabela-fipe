@@ -38,9 +38,10 @@ const resetResponse = (responseContainer, searchButton, image) => {
   responseContainer.classList.add("hidden");
   image.classList.remove("hidden")
 
-  for (let index = 0; index < responseContainer.childElementCount; index++) {
-    const node = responseContainer.children[index];
+  const responseBody = responseContainer.getElementsByClassName("responseContainer__formBody")[0]
 
+  for (let index = 0; index < responseBody.childElementCount; index++) {
+    const node = responseBody.children[index];
     if (!node.classList.contains("fixed")) {
       node.innerHTML = "";
     }

@@ -5,11 +5,25 @@
 
   font-family: "Hind Siliguri", sans-serif;
 
-  --white-primary: #f5f5f5;
+  --white-primary: #ffffff;
+  --white-secundary: #e5e5e5;
   --black-primary: #141414;
-  --gray--primarry: #474747;
+  --grey-primary: #727272;
+  --grey-secundary: #c8c8c8;
+
   --details: #36688e;
+  --green-primary: #50c85b;
+
+  --font-body: "Hind Siliguri", sans-serif;
+  --font-title: ;
 }
+
+button,
+a,
+select {
+  cursor: pointer;
+}
+
 body {
   background-color: var(--white-primary);
 }
@@ -17,6 +31,7 @@ body {
 .hidden {
   display: none;
 }
+
 header {
   position: fixed;
   z-index: 2;
@@ -27,12 +42,12 @@ header {
   align-items: center;
 
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   margin-bottom: 20px;
   padding: 5px 10px 3px 10px;
 
   background-color: var(--white-primary);
-  border-bottom: 1px solid var(--gray--primarry);
+  border-bottom: 1px solid #c8c8c8;
 }
 
 .header__title {
@@ -53,16 +68,14 @@ header {
 }
 
 .topMenu {
-  position: relative;
   margin-bottom: 15px;
-  margin-top: 8vh;
+  margin-top: 10vh;
   padding-top: 15px;
 }
 .topMenu__nav {
   text-align: center;
   width: 100%;
 }
-
 .topMenu__button {
   font-size: 12px;
   padding: 0 4px;
@@ -104,8 +117,10 @@ main {
 .searchContainer__form {
   width: 90%;
   margin: 15px auto;
+
   border-radius: 3px;
-  border: 1px solid var(--black-primary);
+  border: 1px solid transparent;
+  background-color: var(--white-secundary);
 }
 .searchContainer__formTitle {
   padding-left: 10px;
@@ -113,29 +128,33 @@ main {
   color: var(--white-primary);
 }
 .searchContainer__formBody {
-  padding: 5px 5px 5px 10px;
+  padding: 10px 8px;
 }
-
 .searchContainer__bodyInput {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   margin-bottom: 8px;
 }
-
 .searchContainer__bodyInput > select {
   height: 30px;
-  width: 90%;
   padding: 0 5px;
+
   border-radius: 4px;
   font-weight: 300;
+}
+.searchContainer__formButton {
+  margin: 20px 15px 28px 0;
+  text-align: end;
 }
 
 .imageContainer {
   position: relative;
+
   height: 218px;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
 }
 
 .imageContainer__img {
@@ -145,27 +164,185 @@ main {
   width: 90%;
 }
 
-.searchContainer__bottom {
-  width: 96%;
-  margin: 20px 0 25px 0;
-  text-align: end;
+.responseContainer {
+  width: 75%;
+  margin: 0 auto 150px auto;
+  border-radius: 3px;
+
+  background-color: var(--white-secundary);
+}
+.responseContainer__title {
+  padding-left: 10px;
+  background-color: var(--black-primary);
+  color: var(--white-primary);
+}
+.responseContainer__topText {
+  font-size: 20px;
+  font-family: "PT Sans", sans-serif;
+  color: var(--details);
+}
+.responseContainer__formBody {
+  padding: 10px 8px;
+}
+.valueText {
+  margin-bottom: 10px;
 }
 
 .standartButton {
-  padding: 2px 8px;
+  margin-left: 10px;
+  padding: 5px 14px;
+
   background-color: var(--black-primary);
   color: var(--white-primary);
   border: none;
-  border-radius: 10px;
-  margin-right: 5px;
+  border-radius: 15px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
+  header {
+    position: static;
+    height: 15vh;
+    padding: 0 4vw;
+  }
   .header__mobileMenu {
     display: none;
   }
+  .header__title {
+    width: 30%;
+    font-size: 36px;
+    margin-left: 10px;
+  }
   .header__content {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+  .faleConosco {
+    color: var(--grey-primary);
+    text-decoration: none;
+  }
+  .wpp {
+    background-color: var(--green-primary);
+  }
+  .header__icon {
+    margin: 0 8px;
+    width: 48px;
   }
 
+  .topMenu {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .topMenu__nav {
+    display: flex;
+
+    text-align: left;
+    margin-left: 5vw;
+    width: 100%;
+  }
+  .topMenu__button {
+    padding: 0 4px;
+    margin: 0 6px;
+
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .topMenu__button--home {
+    font-size: 12px;
+    padding: 0 4px;
+    margin-left: 2px;
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: initial;
+
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .searchContainer {
+    width: 58%;
+  }
+  .searchContainer__topContent > h1 {
+    width: 90%;
+    margin: 10px auto 0 auto;
+    margin-bottom: 2px;
+  }
+  .searchContainer__topContent > p {
+    width: 90%;
+    margin-block-end: 0;
+    margin: 0 auto 25px auto;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.4px;
+  }
+
+  .searchContainer__form {
+    margin: 15px auto;
+    border-radius: 3px;
+    border: 1px solid transparent;
+  }
+  .searchContainer__formTitle {
+    padding-left: 10px;
+    background-color: var(--black-primary);
+    color: var(--white-primary);
+  }
+  .searchContainer__formBody {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    padding: 0 5px;
+  }
+  .searchContainer__bodyInput {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 8px auto;
+  }
+  .searchContainer__bodyInput > select {
+    height: 35px;
+    padding: 0 5px;
+    font-weight: 300;
+  }
+
+  .searchContainer__formButton {
+    margin: 20px 15px;
+    text-align: end;
+  }
+  .imageContainer {
+    position: relative;
+    height: 218px;
+    width: 40%;
+    margin: 50px auto;
+  }
+
+  .imageContainer__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 385px;
+    height: 250px;
+  }
+
+  .responseContainer {
+    width: 35%;
+    height: 250px;
+
+    border: 1px solid transparent;
+  }
+  .responseContainer__formBody {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0 0 10px;
+  }
 }
